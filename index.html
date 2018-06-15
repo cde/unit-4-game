@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> CrystalsCollector Game</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+                <div class="col-md-12 px-0">
+                    <h1 class="display-4 font-italic">Crystals Collector</h1>
+                    <p>You will be given a random-number at the start of the game</p>
+                    <p>There are four crystals below. By clicking on a crystal it will add a specific amount of points to your total score</p>
+                    <p>You win the game by matching your total points to random number</p>
+                    <p>You lose the game if your total points goes above the random number</p>
+                    <p>Each time when the game starts, or you lose or win, the game will change the values of each crystal</p>
+                </div>
+            </div>   
+            <div class="row mb-2">
+                <div class="col-sm-4 col-md-4">
+                    <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <h3 class="mb-0">Random Number</h3>
+                            <h1 class="text-center py-3 random-number" data-generatedNumber="34">34</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Win
+                            <span id ="wins" class="badge badge-primary badge-pill">0</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Losses
+                            <span id="losses" class="badge badge-primary badge-pill">0</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Total Points
+                            <span id="total-points" class="badge badge-primary badge-pill">0</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>    
+            <div class="row">
+                <div id="crystals" class="col-sm-12 py-2 align-items-center ">
+                    <button id="ruby" type="button" data-number="0" class="btn btn-danger">
+                        <img src="assets/images/ruby.jpg" height="200px" width="200px">
+                    </button>
+                    <button id="sapphire" type="button" data-number="0" class="btn btn-info">
+                        <img src="assets/images/sapphire.jpg" height="200px" width="200px">
+                    </button>
+                    <button id="amber" type="button" data-number="0" class="btn btn-warning">
+                            <img src="assets/images/amber.jpg" height="200px" width="200px">
+                    </button>
+                    <button id="emerald" type="button" data-number="0" class="btn btn-success">
+                        <img src="assets/images/emerald.jpg" height="200px" width="200px">
+                    </button>
+    
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="assets/js/game.js" ></script>
+    </body>
+</html>
